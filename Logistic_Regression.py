@@ -30,7 +30,7 @@ def newton_optimizer(learning_rate, epochs, weights, loss_hist, weights_hist):
         weights_hist.append(weights)
 
         if (epoch > 1):
-            if (loss_hist[-1] > loss_hist[len(loss_hist) - 2]):
+            if (loss_hist[-1] >= loss_hist[len(loss_hist) - 2]):
                 learning_rate /= 10
                 breaker += 1
         if (breaker > 10):
