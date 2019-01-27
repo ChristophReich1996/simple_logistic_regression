@@ -21,7 +21,7 @@ def loss(weights):
     pred = sigmoid(weights, inputs)
     return -np.sum(np.log(pred * targets + (1 - pred) * (1 - targets)))
 
-
+# Newtons methode
 def newton_optimizer(learning_rate, epochs, weights, loss_hist, weights_hist):
     breaker = 0
     for epoch in range(epochs):
